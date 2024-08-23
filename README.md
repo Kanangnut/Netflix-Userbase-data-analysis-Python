@@ -32,7 +32,7 @@ This project involves performing exploratory data analysis on a Netflix userbase
 ### Conclusion:
 The EDA on Netflix's userbase provided valuable insights into customer demographics, device preferences, and revenue distribution. The analysis identified key trends, such as the popularity of `Basic` subscriptions, the prevalence of smartphone usage, and the significant contribution of certain countries to Netflix's revenue. These findings can guide strategic decisions in marketing, content creation, and customer retention.
 
-For the Netflix Exploratory Data Analysis (EDA) project, the following tools and technical concepts were used:
+**For the Netflix Exploratory Data Analysis (EDA) project, the following tools and technical concepts were used:**
 
 ### Tools:
 1. **Python:** The primary programming language used for data analysis.
