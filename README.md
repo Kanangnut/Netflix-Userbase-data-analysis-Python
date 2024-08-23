@@ -1,4 +1,4 @@
-**Exploratory Data Analysis (EDA) on Netflix Userbase**
+## Exploratory Data Analysis (EDA) on Netflix Userbase
 
 This project involves performing exploratory data analysis on a Netflix userbase dataset containing 2,500 rows and 10 columns. The analysis aims to uncover insights about user demographics, subscription patterns, and revenue distribution. The dataset includes information on subscription type, monthly revenue, join date, last payment date, country, age, gender, device, and plan duration.
 
@@ -32,7 +32,7 @@ This project involves performing exploratory data analysis on a Netflix userbase
 ### Conclusion:
 The EDA on Netflix's userbase provided valuable insights into customer demographics, device preferences, and revenue distribution. The analysis identified key trends, such as the popularity of `Basic` subscriptions, the prevalence of smartphone usage, and the significant contribution of certain countries to Netflix's revenue. These findings can guide strategic decisions in marketing, content creation, and customer retention.
 
-**For the Netflix Exploratory Data Analysis (EDA) project, the following tools and technical concepts were used:**
+## For the Netflix Exploratory Data Analysis (EDA) project, the following tools and technical concepts were used:
 
 ### Tools:
 1. **Python:** The primary programming language used for data analysis.
