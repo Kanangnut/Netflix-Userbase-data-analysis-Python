@@ -1,36 +1,33 @@
-# Netflix-Userbase-data-analysis
+**Exploratory Data Analysis (EDA) on Netflix Userbase**
 
-Here's analysis steps:<br>
+This project involves performing exploratory data analysis on a Netflix userbase dataset containing 2,500 rows and 10 columns. The analysis aims to uncover insights about user demographics, subscription patterns, and revenue distribution. The dataset includes information on subscription type, monthly revenue, join date, last payment date, country, age, gender, device, and plan duration.
 
-<b>1.Loading and Data Overview:</b><br>
-Import necessary libraries (pandas, numpy, matplotlib, seaborn) and set up configurations.
-Read the dataset from a CSV file ("Netflix_Userbase.csv") using pd.read_csv().
-Display the number of rows and columns in the dataset using .shape.
-Display a sample of 5 random rows using .sample().
+### Steps and Key Findings:
 
-<b>Data Cleaning:</b><br>
-Drop the "User ID" column from the dataset using .drop().
-Convert columns "Join Date" and "Last Payment Date" to datetime format using pd.to_datetime().
-Extract year and month from "Join Date" and "Last Payment Date" using the .dt accessor.
-Calculate "Account till" (days since joining) using the current date.
+1. **Data Cleaning and Preprocessing:**
+   - Removed the `User ID` column.
+   - Checked for missing values and duplicates, finding none.
+   - Converted date columns (`Join Date` and `Last Payment Date`) to datetime format.
+   - Extracted year and month from the date columns.
+   - Calculated the account age (in days) since the join date.
+   - Transformed categorical columns (`Subscription Type`, `Country`, `Gender`, `Device`) into dummy variables.
+   - Binned the `Age` column into six categories for more granular analysis.
 
-<b>Data Transformation:</b><br>
-Rename "Plan Duration" column to "Plan Duration(months)" using .rename() method.<br>
-Loop through rows to extract the first character of "Plan Duration(months)" using a for loop.<br>
+2. **Descriptive Statistics:**
+   - The dataset was explored to understand data types, distributions, and memory usage.
+   - Plotted the distribution of subscription types, countries, genders, and age groups.
+   - Observed that `Basic`, `Premium`, and `Standard` subscriptions had varying user distributions, with `Basic` being the most popular.
+   - Created visualizations showing the relationship between age groups, subscription types, and revenue generation.
 
-<b>One-Hot Encoding:</b><br>
-Perform one-hot encoding on categorical columns "Subscription Type," "Country," "Gender," and "Device" using pd.get_dummies() and pd.concat().<br>
+3. **Visualizations and Insights:**
+   - **Subscription Types:** Countplot and pie chart visualizations revealed that the `Basic` subscription is the most common, followed by `Standard` and `Premium`.
+   - **Country and Subscription:** A barplot showed the distribution of subscription types across different countries, with the United States having the highest number of subscribers.
+   - **Gender Distribution:** A pie chart indicated a near-equal distribution between male and female users.
+   - **Age Distribution:** Histograms showed that most users fall within the 28-37 age range.
+   - **Device Usage:** Barplots revealed that smartphones are the most used devices, followed by laptops and tablets.
+   - **Revenue by Device and Country:** Analysis indicated that laptops generate the highest revenue, and the United States contributes the most to Netflix's monthly revenue.
+   - **Subscription Duration:** Plots displayed the correlation between subscription types and plan durations, as well as age groups and plan durations.
+   - **Monthly Revenue Trends:** A line plot highlighted seasonal trends in monthly revenue, indicating potential patterns related to user behavior.
 
-<b>Age Binning:</b><br>
-Create age bins using pd.cut() to categorize users into age groups.<br>
-
-<b>Data Visualization:</b><br>
-Utilize various visualization techniques to explore the data distribution, relationships, and insights.<br>
-The code uses matplotlib and seaborn for visualizations:<br>
- - Bar plots for subscription counts and subscription types by country.<br>
- - Pie chart for gender distribution.<br>
- - Histogram for age distribution.<br>
- - Count plots for subscription types by age bins, age by device, and subscription types by plan duration.<br>
- - Bar plots for monthly revenue by device, by country, and by subscription type.<br>
- - Line plot for monthly revenue trend over time.<br>
-Each visualization provides insights into different aspects of the dataset, helping to understand patterns, relationships, and distributions within the data.
+### Conclusion:
+The EDA on Netflix's userbase provided valuable insights into customer demographics, device preferences, and revenue distribution. The analysis identified key trends, such as the popularity of `Basic` subscriptions, the prevalence of smartphone usage, and the significant contribution of certain countries to Netflix's revenue. These findings can guide strategic decisions in marketing, content creation, and customer retention.
